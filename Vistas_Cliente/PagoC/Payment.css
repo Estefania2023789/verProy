@@ -1,0 +1,149 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 100px); /* Ajusta la altura para considerar el header y el footer */
+  margin: 0;
+}
+
+.payment-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto 1fr;
+  gap: 2rem;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  width: 100%;
+  border: 2px solid #ff6600;
+  height: 100%;
+  position: relative;
+}
+
+.payment-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background: url('./img/pago.png') no-repeat center center;
+  background-size: cover;
+  filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.payment-header h1 {
+  color: white;
+  font-size: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.payment-header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+.payment-content {
+  margin-top: 150px;
+}
+
+.shipping-info {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.payment-methods {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.product-summary {
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+  text-align: left;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  color: #ff6600;
+  font-weight: bold;
+}
+
+.input-box {
+  margin-bottom: 1rem;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.payment-methods .method {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.payment-methods .method input {
+  margin-right: 0.5rem;
+}
+
+.payment-methods .method.disabled input {
+  cursor: not-allowed;
+}
+
+.product-summary {
+  text-align: left;
+}
+
+.product-details, .summary {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.total {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #007bff;
+}
+
+.pay-button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #ff6600;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.pay-button:hover {
+  background-color: #e05500;
+}
+
+.privacy-text {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 1rem;
+  line-height: 1.5;
+  text-align: center;
+}
